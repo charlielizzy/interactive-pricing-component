@@ -1,229 +1,218 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: hsl(230, 100%, 99%);
-    font-family: 'Manrope', sans-serif;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(230, 100%, 99%);
+  font-family: "Manrope", sans-serif;
 }
 
 .header {
-    text-align: center;
-    margin-top: 104px;
-    margin-bottom: 34px;
+  text-align: center;
+  margin-top: 104px;
+  margin-bottom: 34px;
 }
 
-h1, 
+h1,
 h2 {
-    color: hsl(227, 35%, 25%);
-    margin: 0px;
+  color: hsl(227, 35%, 25%);
+  margin: 0px;
 }
 
 h2 {
-font-size: 28px;
-font-weight: 800;
+  font-size: 28px;
+  font-weight: 800;
 }
 
 .sign-up {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 p {
-    color: hsl(225, 20%, 60%);
-    font-size: 12px;
-    font-weight: 600;
+  color: hsl(225, 20%, 60%);
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .card {
-    background-color: white;
-    width: 492px;;
-    height: 330px;
-    margin-top: 54px;
-    padding: 48px;
+  background-color: white;
+  width: 492px;
+  height: 330px;
+  margin-top: 54px;
+  padding: 48px;
 }
 
 .pageviews {
-    text-transform: uppercase;
-    letter-spacing: 2px;;
-    font-weight: 800;
-    font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 14px;
 }
 
 .pageview-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}    
-
-.price {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  height: 8px; /* Specified height */
+  border-radius: 5px;
+  background: hsl(224, 65%, 95%); /* Grey background */
+  outline: none; /* Remove outline */
+  margin-top: 40px;
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
 
-  /* The slider itself */
-  .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; 
-    height: 8px; /* Specified height */
-    border-radius: 5px;
-    background: hsl(224, 65%, 95%); /* Grey background */
-    outline: none; /* Remove outline */
-    margin-top: 40px;
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-    
-  }
-  
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    width: 40px; /* Set a specific slider handle width */
-    height: 40px; /* Slider handle height */
-    border-radius: 50%;
-    background: hsl(174, 86%, 45%); /* Green background */
-    
-    cursor: pointer; /* Cursor on hover */
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 40px; /* Set a specific slider handle width */
-    height: 40px; /* Slider handle height */
-    background: hsl(174, 86%, 45%); /* Green background */
-    
-    cursor: pointer; /* Cursor on hover */
-  }
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  border-radius: 50%;
+  background: hsl(174, 86%, 45%); /* Green background */
+
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: hsl(174, 86%, 45%); /* Green background */
+
+  cursor: pointer; /* Cursor on hover */
+}
 
 .billing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
 }
 
 /* The switch - the box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 30px;
-    height: 17px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .toggle {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .toggle:before {
-    position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .toggle {
-    background-color: hsl(15, 100%, 70%);
-  }
-  
-  input:focus + .toggle {
-    box-shadow: 0 0 1px hsl(15, 100%, 70%);
-  }
-  
-  input:checked + .toggle:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
-  }
-  
-  /* Rounded sliders */
-  .toggle.round {
-    border-radius: 34px;
-  }
-  
-  .toggle.round:before {
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .toggle {
+  background-color: hsl(15, 100%, 70%);
+}
+
+input:focus + .toggle {
+  box-shadow: 0 0 1px hsl(15, 100%, 70%);
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.toggle.round {
+  border-radius: 34px;
+}
+
+.toggle.round:before {
+  border-radius: 50%;
+}
 .yearly-discount {
-    display: flex;
-    gap: 9px;
+  display: flex;
+  gap: 9px;
 }
 
 .discount {
-    background-color: hsl(14, 92%, 95%);
-    color: hsl(15, 100%, 70%);
-    font-size: 10px;
-    font-weight: 800;
-    border-radius: 9.5px;
-    padding: 3px 6px;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  font-size: 10px;
+  font-weight: 800;
+  border-radius: 9.5px;
+  padding: 3px 6px;
 }
 
 hr {
-    height: 1px;
-    border-width: 0px;
-    background-color: #ECF0FB;
-    
+  height: 1px;
+  border-width: 0px;
+  background-color: #ecf0fb;
 }
 
 .benefits {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 ul {
-    list-style-image: url(/images/icon-check.svg)
+  list-style-image: url(/images/icon-check.svg);
 }
 
 .trial {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: hsl(227, 35%, 25%);
-    color: hsl(226, 100%, 87%);
-    border-radius: 20.5px;
-    width: 160px;
-    height: 41px;
-    font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(227, 35%, 25%);
+  color: hsl(226, 100%, 87%);
+  border-radius: 20.5px;
+  width: 160px;
+  height: 41px;
+  font-size: 12px;
 }
 
-
-
-
-
-.attribution { 
-    font-size: 11px; text-align: center; 
-    position:absolute;
-    bottom:0;
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-
