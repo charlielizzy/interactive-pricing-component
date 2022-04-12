@@ -96,10 +96,11 @@ p {
 
 .billing {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 16px;
   margin-top: 40px;
+  padding-right: 50px;
 }
 
 /* The switch - the box around the slider */
